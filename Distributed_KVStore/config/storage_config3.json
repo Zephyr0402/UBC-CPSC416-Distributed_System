@@ -1,0 +1,8 @@
+{
+  "StorageID": "storage3",
+  "StorageAdd": ":8013",
+  "FrontEndAddr": ":8001",
+  "TracerServerAddr": ":6666",
+  "TracerSecret": "",
+  "DiskPath" : "/tmp/disk3/"
+}

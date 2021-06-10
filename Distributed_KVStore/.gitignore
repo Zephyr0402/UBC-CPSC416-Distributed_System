@@ -1,0 +1,19 @@
+# mac
+.DS_Store
+
+# binary
+./client
+./frontend
+./storage
+./tracing-server
+
+# output log
+./shiviz_output.log
+./trace_output.log
+
+# smoke test log
+mySmokeTest/grade.log
+
+# storage file
+jsonStorage/
+jsonStorage/DiskStorage.json

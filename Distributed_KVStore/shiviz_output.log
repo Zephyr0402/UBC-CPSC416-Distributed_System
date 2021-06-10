@@ -1,0 +1,592 @@
+(?<host>\S*) (?<clock>{.*})\n(?<event>.*)
+
+frontend {"frontend":1}
+8715529479827901594 CreateTrace {}
+storage2 {"storage2":1}
+6537903544543384945 CreateTrace {}
+storage2 {"storage2":2}
+6537903544543384945 StorageLoadSuccess {"StorageID":"storage2","State":{}}
+storage2 {"storage2":3}
+6537903544543384945 StorageJoining {"StorageID":"storage2"}
+frontend {"frontend":2}
+8715529479827901594 FrontEndStorageStarted {"StorageID":"storage2"}
+frontend {"frontend":3}
+8715529479827901594 FrontEndStorageJoined {"StorageIds":["storage2"]}
+storage2 {"storage2":4}
+6537903544543384945 StorageJoined {"StorageID":"storage2","State":{}}
+storage1 {"storage1":1}
+2086000073449634717 CreateTrace {}
+storage1 {"storage1":2}
+2086000073449634717 StorageLoadSuccess {"StorageID":"storage1","State":{}}
+storage1 {"storage1":3}
+2086000073449634717 StorageJoining {"StorageID":"storage1"}
+frontend {"frontend":4}
+8715529479827901594 FrontEndStorageStarted {"StorageID":"storage1"}
+frontend {"frontend":5}
+8715529479827901594 FrontEndStorageJoined {"StorageIds":["storage2","storage1"]}
+storage1 {"storage1":4}
+2086000073449634717 StorageJoined {"StorageID":"storage1","State":{}}
+storage3 {"storage3":1}
+2333670455726680980 CreateTrace {}
+storage3 {"storage3":2}
+2333670455726680980 StorageLoadSuccess {"StorageID":"storage3","State":{}}
+storage3 {"storage3":3}
+2333670455726680980 StorageJoining {"StorageID":"storage3"}
+frontend {"frontend":6}
+8715529479827901594 FrontEndStorageStarted {"StorageID":"storage3"}
+frontend {"frontend":7}
+8715529479827901594 FrontEndStorageJoined {"StorageIds":["storage2","storage1","storage3"]}
+storage3 {"storage3":4}
+2333670455726680980 StorageJoined {"StorageID":"storage3","State":{}}
+client1 {"client1":1}
+7893085645585543563 CreateTrace {}
+client1 {"client1":2}
+7893085645585543563 KvslibBegin {"ClientId":"client1"}
+client2 {"client2":1}
+3657937185799933058 CreateTrace {}
+client2 {"client2":2}
+3657937185799933058 KvslibBegin {"ClientId":"client2"}
+client1 {"client1":3}
+4393421430825807889 CreateTrace {}
+client1 {"client1":4}
+4393421430825807889 KvslibPut {"ClientId":"client1","OpId":0,"Key":"key3","Value":"value3"}
+client1 {"client1":5}
+4393421430825807889 GenerateTokenTrace {"Token":"p2NsaWVudDHPPPiRg5T18BGBp2NsaWVudDEF"}
+client1 {"client1":6}
+293935963341033733 CreateTrace {}
+client1 {"client1":7}
+293935963341033733 KvslibGet {"ClientId":"client1","OpId":1,"Key":"key1"}
+client1 {"client1":8}
+293935963341033733 GenerateTokenTrace {"Token":"p2NsaWVudDHPBBRFM4mnkQWBp2NsaWVudDEI"}
+client1 {"client1":9}
+8352341195803871005 CreateTrace {}
+client1 {"client1":10}
+8352341195803871005 KvslibPut {"ClientId":"client1","OpId":2,"Key":"key4","Value":"value4"}
+frontend {"frontend":8, "client1":5}
+4393421430825807889 ReceiveTokenTrace {"Token":"p2NsaWVudDHPPPiRg5T18BGBp2NsaWVudDEF"}
+client1 {"client1":11}
+8352341195803871005 GenerateTokenTrace {"Token":"p2NsaWVudDHPc+l6EKLARx2Bp2NsaWVudDEL"}
+frontend {"frontend":9, "client1":5}
+4393421430825807889 FrontEndPut {"Key":"key3","Value":"value3"}
+client1 {"client1":12}
+1986567809423801336 CreateTrace {}
+client1 {"client1":13}
+1986567809423801336 KvslibGet {"ClientId":"client1","OpId":3,"Key":"key1"}
+client1 {"client1":14}
+1986567809423801336 GenerateTokenTrace {"Token":"p2NsaWVudDHPG5G05brue/iBp2NsaWVudDEO"}
+frontend {"frontend":10, "client1":5}
+4393421430825807889 GenerateTokenTrace {"Token":"qGZyb250ZW5kzzz4kYOU9fARgqhmcm9udGVuZAqnY2xpZW50MQU="}
+client2 {"client2":3}
+5456747827838441211 CreateTrace {}
+client2 {"client2":4}
+5456747827838441211 KvslibPut {"ClientId":"client2","OpId":0,"Key":"key1","Value":"value2"}
+frontend {"frontend":11, "client1":5}
+4393421430825807889 GenerateTokenTrace {"Token":"qGZyb250ZW5kzzz4kYOU9fARgqhmcm9udGVuZAunY2xpZW50MQU="}
+client2 {"client2":5}
+5456747827838441211 GenerateTokenTrace {"Token":"p2NsaWVudDLPS7pDPQMx1vuBp2NsaWVudDIF"}
+frontend {"client1":5, "frontend":12}
+4393421430825807889 GenerateTokenTrace {"Token":"qGZyb250ZW5kzzz4kYOU9fARgqhmcm9udGVuZAynY2xpZW50MQU="}
+client1 {"client1":15}
+2798797181729501876 CreateTrace {}
+storage1 {"storage1":5, "frontend":10, "client1":5}
+4393421430825807889 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzzz4kYOU9fARgqhmcm9udGVuZAqnY2xpZW50MQU="}
+client1 {"client1":16}
+2798797181729501876 KvslibGet {"ClientId":"client1","OpId":4,"Key":"key1"}
+storage2 {"storage2":5, "frontend":11, "client1":5}
+4393421430825807889 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzzz4kYOU9fARgqhmcm9udGVuZAunY2xpZW50MQU="}
+storage1 {"storage1":6, "frontend":10, "client1":5}
+4393421430825807889 StoragePut {"StorageID":"","Key":"key3","Value":"value3"}
+client1 {"client1":17}
+2798797181729501876 GenerateTokenTrace {"Token":"p2NsaWVudDHPJtdTNUdZ8rSBp2NsaWVudDER"}
+storage2 {"client1":5, "storage2":6, "frontend":11}
+4393421430825807889 StoragePut {"StorageID":"","Key":"key3","Value":"value3"}
+storage3 {"storage3":5, "frontend":12, "client1":5}
+4393421430825807889 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzzz4kYOU9fARgqhmcm9udGVuZAynY2xpZW50MQU="}
+storage1 {"storage1":7, "frontend":10, "client1":5}
+4393421430825807889 StorageSaveData {"StorageID":"","Key":"key3","Value":"value3"}
+storage2 {"storage2":7, "frontend":11, "client1":5}
+4393421430825807889 StorageSaveData {"StorageID":"","Key":"key3","Value":"value3"}
+storage3 {"storage3":6, "frontend":12, "client1":5}
+4393421430825807889 StoragePut {"StorageID":"","Key":"key3","Value":"value3"}
+storage1 {"frontend":10, "client1":5, "storage1":8}
+4393421430825807889 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uxzzz4kYOU9fARg6hzdG9yYWdlMQioZnJvbnRlbmQKp2NsaWVudDEF"}
+storage2 {"storage2":8, "frontend":11, "client1":5}
+4393421430825807889 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uyzzz4kYOU9fARg6djbGllbnQxBahzdG9yYWdlMgioZnJvbnRlbmQL"}
+storage3 {"storage3":7, "frontend":12, "client1":5}
+4393421430825807889 StorageSaveData {"StorageID":"","Key":"key3","Value":"value3"}
+frontend {"frontend":13, "client1":5, "storage2":8}
+4393421430825807889 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uyzzz4kYOU9fARg6djbGllbnQxBahzdG9yYWdlMgioZnJvbnRlbmQL"}
+storage3 {"storage3":8, "frontend":12, "client1":5}
+4393421430825807889 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uzzzz4kYOU9fARg6hzdG9yYWdlMwioZnJvbnRlbmQMp2NsaWVudDEF"}
+frontend {"frontend":14, "client1":5, "storage2":8, "storage1":8}
+4393421430825807889 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uxzzz4kYOU9fARg6hzdG9yYWdlMQioZnJvbnRlbmQKp2NsaWVudDEF"}
+frontend {"frontend":15, "client1":5, "storage2":8, "storage1":8, "storage3":8}
+4393421430825807889 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uzzzz4kYOU9fARg6hzdG9yYWdlMwioZnJvbnRlbmQMp2NsaWVudDEF"}
+frontend {"storage1":8, "storage3":8, "frontend":16, "client1":5, "storage2":8}
+4393421430825807889 FrontEndPutResult {"Err":false}
+frontend {"storage3":8, "frontend":17, "client1":5, "storage2":8, "storage1":8}
+4393421430825807889 GenerateTokenTrace {"Token":"qGZyb250ZW5kzzz4kYOU9fARhahzdG9yYWdlMwioZnJvbnRlbmQRp2NsaWVudDEFqHN0b3JhZ2UyCKhzdG9yYWdlMQg="}
+frontend {"storage1":8, "storage3":8, "frontend":18, "client1":8, "storage2":8}
+293935963341033733 ReceiveTokenTrace {"Token":"p2NsaWVudDHPBBRFM4mnkQWBp2NsaWVudDEI"}
+frontend {"storage1":8, "storage3":8, "frontend":19, "client1":8, "storage2":8}
+293935963341033733 FrontEndGet {"Key":"key1"}
+client1 {"frontend":17, "storage2":8, "storage1":8, "client1":18, "storage3":8}
+4393421430825807889 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzzz4kYOU9fARhahzdG9yYWdlMwioZnJvbnRlbmQRp2NsaWVudDEFqHN0b3JhZ2UyCKhzdG9yYWdlMQg="}
+frontend {"client1":8, "storage2":8, "storage1":8, "storage3":8, "frontend":20}
+293935963341033733 GenerateTokenTrace {"Token":"qGZyb250ZW5kzwQURTOJp5EFhahmcm9udGVuZBSnY2xpZW50MQioc3RvcmFnZTIIqHN0b3JhZ2UxCKhzdG9yYWdlMwg="}
+client1 {"storage3":8, "frontend":17, "storage2":8, "storage1":8, "client1":19}
+4393421430825807889 KvslibPutResult {"OpId":0,"Err":false}
+frontend {"storage3":8, "frontend":21, "client1":8, "storage2":8, "storage1":8}
+293935963341033733 GenerateTokenTrace {"Token":"qGZyb250ZW5kzwQURTOJp5EFhahmcm9udGVuZBWnY2xpZW50MQioc3RvcmFnZTIIqHN0b3JhZ2UxCKhzdG9yYWdlMwg="}
+storage1 {"client1":8, "storage2":8, "storage3":8, "storage1":9, "frontend":20}
+293935963341033733 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzwQURTOJp5EFhahmcm9udGVuZBSnY2xpZW50MQioc3RvcmFnZTIIqHN0b3JhZ2UxCKhzdG9yYWdlMwg="}
+frontend {"storage2":8, "storage1":8, "storage3":8, "frontend":22, "client1":8}
+293935963341033733 GenerateTokenTrace {"Token":"qGZyb250ZW5kzwQURTOJp5EFhahmcm9udGVuZBanY2xpZW50MQioc3RvcmFnZTIIqHN0b3JhZ2UxCKhzdG9yYWdlMwg="}
+storage1 {"storage3":8, "storage1":10, "frontend":20, "client1":8, "storage2":8}
+293935963341033733 StorageGet {"StorageID":"","Key":"key1"}
+storage3 {"storage2":8, "storage1":8, "storage3":9, "frontend":21, "client1":8}
+293935963341033733 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzwQURTOJp5EFhahmcm9udGVuZBWnY2xpZW50MQioc3RvcmFnZTIIqHN0b3JhZ2UxCKhzdG9yYWdlMwg="}
+storage1 {"storage3":8, "storage1":11, "frontend":20, "client1":8, "storage2":8}
+293935963341033733 StorageGetResult {"StorageID":"","Key":"key1","Value":null}
+storage3 {"frontend":21, "client1":8, "storage2":8, "storage1":8, "storage3":10}
+293935963341033733 StorageGet {"StorageID":"","Key":"key1"}
+storage2 {"storage2":9, "frontend":22, "client1":8, "storage1":8, "storage3":8}
+293935963341033733 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzwQURTOJp5EFhahmcm9udGVuZBanY2xpZW50MQioc3RvcmFnZTIIqHN0b3JhZ2UxCKhzdG9yYWdlMwg="}
+storage1 {"storage2":8, "storage3":8, "storage1":12, "frontend":20, "client1":8}
+293935963341033733 GenerateTokenTrace {"Token":"qHN0b3JhZ2UxzwQURTOJp5EFhahzdG9yYWdlMgioc3RvcmFnZTMIqHN0b3JhZ2UxDKhmcm9udGVuZBSnY2xpZW50MQg="}
+storage3 {"storage3":11, "frontend":21, "client1":8, "storage2":8, "storage1":8}
+293935963341033733 StorageGetResult {"StorageID":"","Key":"key1","Value":null}
+storage2 {"storage1":8, "storage3":8, "storage2":10, "frontend":22, "client1":8}
+293935963341033733 StorageGet {"StorageID":"","Key":"key1"}
+storage3 {"storage2":8, "storage1":8, "storage3":12, "frontend":21, "client1":8}
+293935963341033733 GenerateTokenTrace {"Token":"qHN0b3JhZ2UzzwQURTOJp5EFhadjbGllbnQxCKhzdG9yYWdlMgioc3RvcmFnZTEIqHN0b3JhZ2UzDKhmcm9udGVuZBU="}
+storage2 {"frontend":22, "client1":8, "storage1":8, "storage3":8, "storage2":11}
+293935963341033733 StorageGetResult {"StorageID":"","Key":"key1","Value":null}
+frontend {"client1":8, "storage2":8, "storage1":12, "storage3":8, "frontend":23}
+293935963341033733 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UxzwQURTOJp5EFhahzdG9yYWdlMgioc3RvcmFnZTMIqHN0b3JhZ2UxDKhmcm9udGVuZBSnY2xpZW50MQg="}
+storage2 {"frontend":22, "client1":8, "storage1":8, "storage3":8, "storage2":12}
+293935963341033733 GenerateTokenTrace {"Token":"qHN0b3JhZ2UyzwQURTOJp5EFhahzdG9yYWdlMgyoZnJvbnRlbmQWp2NsaWVudDEIqHN0b3JhZ2UxCKhzdG9yYWdlMwg="}
+frontend {"frontend":24, "client1":8, "storage2":8, "storage1":12, "storage3":12}
+293935963341033733 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UzzwQURTOJp5EFhadjbGllbnQxCKhzdG9yYWdlMgioc3RvcmFnZTEIqHN0b3JhZ2UzDKhmcm9udGVuZBU="}
+frontend {"storage3":12, "frontend":25, "client1":8, "storage2":12, "storage1":12}
+293935963341033733 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UyzwQURTOJp5EFhahzdG9yYWdlMgyoZnJvbnRlbmQWp2NsaWVudDEIqHN0b3JhZ2UxCKhzdG9yYWdlMwg="}
+frontend {"storage2":12, "storage1":12, "storage3":12, "frontend":26, "client1":8}
+293935963341033733 FrontEndGetResult {"Key":"key1","Value":null,"Err":false}
+frontend {"frontend":27, "client1":8, "storage2":12, "storage1":12, "storage3":12}
+293935963341033733 GenerateTokenTrace {"Token":"qGZyb250ZW5kzwQURTOJp5EFhahzdG9yYWdlMQyoc3RvcmFnZTMMqGZyb250ZW5kG6djbGllbnQxCKhzdG9yYWdlMgw="}
+frontend {"frontend":28, "client1":11, "storage2":12, "storage1":12, "storage3":12}
+8352341195803871005 ReceiveTokenTrace {"Token":"p2NsaWVudDHPc+l6EKLARx2Bp2NsaWVudDEL"}
+client1 {"storage3":12, "frontend":27, "storage2":12, "storage1":12, "client1":20}
+293935963341033733 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzwQURTOJp5EFhahzdG9yYWdlMQyoc3RvcmFnZTMMqGZyb250ZW5kG6djbGllbnQxCKhzdG9yYWdlMgw="}
+frontend {"storage1":12, "storage3":12, "frontend":29, "client1":11, "storage2":12}
+8352341195803871005 FrontEndPut {"Key":"key4","Value":"value4"}
+client1 {"frontend":27, "storage2":12, "storage1":12, "client1":21, "storage3":12}
+293935963341033733 KvslibGetResult {"OpId":1,"Key":"key1","Value":null,"Err":false}
+frontend {"storage2":12, "storage1":12, "storage3":12, "frontend":30, "client1":11}
+8352341195803871005 GenerateTokenTrace {"Token":"qGZyb250ZW5kz3PpehCiwEcdhahmcm9udGVuZB6nY2xpZW50MQuoc3RvcmFnZTIMqHN0b3JhZ2UxDKhzdG9yYWdlMww="}
+frontend {"frontend":31, "client1":11, "storage2":12, "storage1":12, "storage3":12}
+8352341195803871005 GenerateTokenTrace {"Token":"qGZyb250ZW5kz3PpehCiwEcdhahmcm9udGVuZB+nY2xpZW50MQuoc3RvcmFnZTIMqHN0b3JhZ2UxDKhzdG9yYWdlMww="}
+storage2 {"storage3":12, "storage2":13, "frontend":30, "client1":11, "storage1":12}
+8352341195803871005 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz3PpehCiwEcdhahmcm9udGVuZB6nY2xpZW50MQuoc3RvcmFnZTIMqHN0b3JhZ2UxDKhzdG9yYWdlMww="}
+frontend {"storage2":12, "storage1":12, "storage3":12, "frontend":32, "client1":11}
+8352341195803871005 GenerateTokenTrace {"Token":"qGZyb250ZW5kz3PpehCiwEcdhadjbGllbnQxC6hzdG9yYWdlMgyoc3RvcmFnZTEMqHN0b3JhZ2UzDKhmcm9udGVuZCA="}
+storage2 {"client1":11, "storage1":12, "storage3":12, "storage2":14, "frontend":30}
+8352341195803871005 StoragePut {"StorageID":"","Key":"key4","Value":"value4"}
+storage3 {"storage3":13, "frontend":31, "client1":11, "storage2":12, "storage1":12}
+8352341195803871005 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz3PpehCiwEcdhahmcm9udGVuZB+nY2xpZW50MQuoc3RvcmFnZTIMqHN0b3JhZ2UxDKhzdG9yYWdlMww="}
+storage3 {"frontend":31, "client1":11, "storage2":12, "storage1":12, "storage3":14}
+8352341195803871005 StoragePut {"StorageID":"","Key":"key4","Value":"value4"}
+storage2 {"storage2":15, "frontend":30, "client1":11, "storage1":12, "storage3":12}
+8352341195803871005 StorageSaveData {"StorageID":"","Key":"key4","Value":"value4"}
+storage1 {"frontend":32, "client1":11, "storage2":12, "storage3":12, "storage1":13}
+8352341195803871005 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz3PpehCiwEcdhadjbGllbnQxC6hzdG9yYWdlMgyoc3RvcmFnZTEMqHN0b3JhZ2UzDKhmcm9udGVuZCA="}
+storage2 {"storage2":16, "frontend":30, "client1":11, "storage1":12, "storage3":12}
+8352341195803871005 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uyz3PpehCiwEcdhadjbGllbnQxC6hzdG9yYWdlMQyoc3RvcmFnZTMMqHN0b3JhZ2UyEKhmcm9udGVuZB4="}
+storage1 {"frontend":32, "client1":11, "storage2":12, "storage3":12, "storage1":14}
+8352341195803871005 StoragePut {"StorageID":"","Key":"key4","Value":"value4"}
+storage3 {"storage1":12, "storage3":15, "frontend":31, "client1":11, "storage2":12}
+8352341195803871005 StorageSaveData {"StorageID":"","Key":"key4","Value":"value4"}
+storage3 {"storage1":12, "storage3":16, "frontend":31, "client1":11, "storage2":12}
+8352341195803871005 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uzz3PpehCiwEcdhahzdG9yYWdlMxCoZnJvbnRlbmQfp2NsaWVudDELqHN0b3JhZ2UyDKhzdG9yYWdlMQw="}
+storage1 {"storage3":12, "storage1":15, "frontend":32, "client1":11, "storage2":12}
+8352341195803871005 StorageSaveData {"StorageID":"","Key":"key4","Value":"value4"}
+frontend {"frontend":33, "client1":11, "storage2":16, "storage1":12, "storage3":12}
+8352341195803871005 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uyz3PpehCiwEcdhadjbGllbnQxC6hzdG9yYWdlMQyoc3RvcmFnZTMMqHN0b3JhZ2UyEKhmcm9udGVuZB4="}
+storage1 {"client1":11, "storage2":12, "storage3":12, "storage1":16, "frontend":32}
+8352341195803871005 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uxz3PpehCiwEcdhahzdG9yYWdlMRCoZnJvbnRlbmQgp2NsaWVudDELqHN0b3JhZ2UyDKhzdG9yYWdlMww="}
+frontend {"client1":11, "storage2":16, "storage1":12, "storage3":16, "frontend":34}
+8352341195803871005 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uzz3PpehCiwEcdhahzdG9yYWdlMxCoZnJvbnRlbmQfp2NsaWVudDELqHN0b3JhZ2UyDKhzdG9yYWdlMQw="}
+frontend {"storage3":16, "frontend":35, "client1":11, "storage2":16, "storage1":16}
+8352341195803871005 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uxz3PpehCiwEcdhahzdG9yYWdlMRCoZnJvbnRlbmQgp2NsaWVudDELqHN0b3JhZ2UyDKhzdG9yYWdlMww="}
+frontend {"frontend":36, "client1":11, "storage2":16, "storage1":16, "storage3":16}
+8352341195803871005 FrontEndPutResult {"Err":false}
+frontend {"storage2":16, "storage1":16, "storage3":16, "frontend":37, "client1":11}
+8352341195803871005 GenerateTokenTrace {"Token":"qGZyb250ZW5kz3PpehCiwEcdhahmcm9udGVuZCWnY2xpZW50MQuoc3RvcmFnZTIQqHN0b3JhZ2UxEKhzdG9yYWdlMxA="}
+frontend {"frontend":38, "client1":14, "storage2":16, "storage1":16, "storage3":16}
+1986567809423801336 ReceiveTokenTrace {"Token":"p2NsaWVudDHPG5G05brue/iBp2NsaWVudDEO"}
+frontend {"client1":14, "storage2":16, "storage1":16, "storage3":16, "frontend":39}
+1986567809423801336 FrontEndGet {"Key":"key1"}
+client1 {"client1":22, "storage3":16, "frontend":37, "storage2":16, "storage1":16}
+8352341195803871005 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz3PpehCiwEcdhahmcm9udGVuZCWnY2xpZW50MQuoc3RvcmFnZTIQqHN0b3JhZ2UxEKhzdG9yYWdlMxA="}
+client1 {"client1":23, "storage3":16, "frontend":37, "storage2":16, "storage1":16}
+8352341195803871005 KvslibPutResult {"OpId":2,"Err":false}
+frontend {"storage2":16, "storage1":16, "storage3":16, "frontend":40, "client1":14}
+1986567809423801336 GenerateTokenTrace {"Token":"qGZyb250ZW5kzxuRtOW67nv4hahzdG9yYWdlMRCoc3RvcmFnZTMQqGZyb250ZW5kKKdjbGllbnQxDqhzdG9yYWdlMhA="}
+frontend {"storage3":16, "frontend":41, "client1":14, "storage2":16, "storage1":16}
+1986567809423801336 GenerateTokenTrace {"Token":"qGZyb250ZW5kzxuRtOW67nv4hahzdG9yYWdlMxCoZnJvbnRlbmQpp2NsaWVudDEOqHN0b3JhZ2UyEKhzdG9yYWdlMRA="}
+storage2 {"storage2":17, "frontend":40, "client1":14, "storage1":16, "storage3":16}
+1986567809423801336 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzxuRtOW67nv4hahzdG9yYWdlMRCoc3RvcmFnZTMQqGZyb250ZW5kKKdjbGllbnQxDqhzdG9yYWdlMhA="}
+frontend {"storage3":16, "frontend":42, "client1":14, "storage2":16, "storage1":16}
+1986567809423801336 GenerateTokenTrace {"Token":"qGZyb250ZW5kzxuRtOW67nv4hadjbGllbnQxDqhzdG9yYWdlMhCoc3RvcmFnZTEQqHN0b3JhZ2UzEKhmcm9udGVuZCo="}
+storage2 {"client1":14, "storage1":16, "storage3":16, "storage2":18, "frontend":40}
+1986567809423801336 StorageGet {"StorageID":"","Key":"key1"}
+storage1 {"storage1":17, "frontend":41, "client1":14, "storage2":16, "storage3":16}
+1986567809423801336 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzxuRtOW67nv4hahzdG9yYWdlMxCoZnJvbnRlbmQpp2NsaWVudDEOqHN0b3JhZ2UyEKhzdG9yYWdlMRA="}
+storage2 {"storage3":16, "storage2":19, "frontend":40, "client1":14, "storage1":16}
+1986567809423801336 StorageGetResult {"StorageID":"","Key":"key1","Value":null}
+storage1 {"storage1":18, "frontend":41, "client1":14, "storage2":16, "storage3":16}
+1986567809423801336 StorageGet {"StorageID":"","Key":"key1"}
+storage3 {"storage3":17, "frontend":42, "client1":14, "storage2":16, "storage1":16}
+1986567809423801336 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzxuRtOW67nv4hadjbGllbnQxDqhzdG9yYWdlMhCoc3RvcmFnZTEQqHN0b3JhZ2UzEKhmcm9udGVuZCo="}
+storage2 {"frontend":40, "client1":14, "storage1":16, "storage3":16, "storage2":20}
+1986567809423801336 GenerateTokenTrace {"Token":"qHN0b3JhZ2UyzxuRtOW67nv4hadjbGllbnQxDqhzdG9yYWdlMRCoc3RvcmFnZTMQqHN0b3JhZ2UyFKhmcm9udGVuZCg="}
+storage1 {"storage1":19, "frontend":41, "client1":14, "storage2":16, "storage3":16}
+1986567809423801336 StorageGetResult {"StorageID":"","Key":"key1","Value":null}
+storage3 {"storage3":18, "frontend":42, "client1":14, "storage2":16, "storage1":16}
+1986567809423801336 StorageGet {"StorageID":"","Key":"key1"}
+storage3 {"frontend":42, "client1":14, "storage2":16, "storage1":16, "storage3":19}
+1986567809423801336 StorageGetResult {"StorageID":"","Key":"key1","Value":null}
+storage1 {"storage1":20, "frontend":41, "client1":14, "storage2":16, "storage3":16}
+1986567809423801336 GenerateTokenTrace {"Token":"qHN0b3JhZ2UxzxuRtOW67nv4hahzdG9yYWdlMRSoZnJvbnRlbmQpp2NsaWVudDEOqHN0b3JhZ2UyEKhzdG9yYWdlMxA="}
+storage3 {"client1":14, "storage2":16, "storage1":16, "storage3":20, "frontend":42}
+1986567809423801336 GenerateTokenTrace {"Token":"qHN0b3JhZ2UzzxuRtOW67nv4hadjbGllbnQxDqhzdG9yYWdlMhCoc3RvcmFnZTEQqHN0b3JhZ2UzFKhmcm9udGVuZCo="}
+frontend {"storage2":20, "storage1":16, "storage3":16, "frontend":43, "client1":14}
+1986567809423801336 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UyzxuRtOW67nv4hadjbGllbnQxDqhzdG9yYWdlMRCoc3RvcmFnZTMQqHN0b3JhZ2UyFKhmcm9udGVuZCg="}
+frontend {"frontend":44, "client1":14, "storage2":20, "storage1":20, "storage3":16}
+1986567809423801336 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UxzxuRtOW67nv4hahzdG9yYWdlMRSoZnJvbnRlbmQpp2NsaWVudDEOqHN0b3JhZ2UyEKhzdG9yYWdlMxA="}
+frontend {"frontend":45, "client1":14, "storage2":20, "storage1":20, "storage3":20}
+1986567809423801336 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UzzxuRtOW67nv4hadjbGllbnQxDqhzdG9yYWdlMhCoc3RvcmFnZTEQqHN0b3JhZ2UzFKhmcm9udGVuZCo="}
+frontend {"client1":14, "storage2":20, "storage1":20, "storage3":20, "frontend":46}
+1986567809423801336 FrontEndGetResult {"Key":"key1","Value":null,"Err":false}
+frontend {"client1":14, "storage2":20, "storage1":20, "storage3":20, "frontend":47}
+1986567809423801336 GenerateTokenTrace {"Token":"qGZyb250ZW5kzxuRtOW67nv4hahmcm9udGVuZC+nY2xpZW50MQ6oc3RvcmFnZTIUqHN0b3JhZ2UxFKhzdG9yYWdlMxQ="}
+frontend {"storage3":20, "client2":5, "frontend":48, "client1":14, "storage2":20, "storage1":20}
+5456747827838441211 ReceiveTokenTrace {"Token":"p2NsaWVudDLPS7pDPQMx1vuBp2NsaWVudDIF"}
+client1 {"storage2":20, "storage1":20, "client1":24, "storage3":20, "frontend":47}
+1986567809423801336 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzxuRtOW67nv4hahmcm9udGVuZC+nY2xpZW50MQ6oc3RvcmFnZTIUqHN0b3JhZ2UxFKhzdG9yYWdlMxQ="}
+frontend {"client2":5, "frontend":49, "client1":14, "storage2":20, "storage1":20, "storage3":20}
+5456747827838441211 FrontEndPut {"Key":"key1","Value":"value2"}
+client1 {"client1":25, "storage3":20, "frontend":47, "storage2":20, "storage1":20}
+1986567809423801336 KvslibGetResult {"OpId":3,"Key":"key1","Value":null,"Err":false}
+frontend {"storage2":20, "storage1":20, "storage3":20, "client2":5, "frontend":50, "client1":14}
+5456747827838441211 GenerateTokenTrace {"Token":"qGZyb250ZW5kz0u6Qz0DMdb7hqhzdG9yYWdlMRSoc3RvcmFnZTMUp2NsaWVudDIFqGZyb250ZW5kMqdjbGllbnQxDqhzdG9yYWdlMhQ="}
+frontend {"client2":5, "frontend":51, "client1":14, "storage2":20, "storage1":20, "storage3":20}
+5456747827838441211 GenerateTokenTrace {"Token":"qGZyb250ZW5kz0u6Qz0DMdb7hqdjbGllbnQyBahmcm9udGVuZDOnY2xpZW50MQ6oc3RvcmFnZTIUqHN0b3JhZ2UxFKhzdG9yYWdlMxQ="}
+storage2 {"frontend":50, "client1":14, "storage1":20, "storage3":20, "client2":5, "storage2":21}
+5456747827838441211 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz0u6Qz0DMdb7hqhzdG9yYWdlMRSoc3RvcmFnZTMUp2NsaWVudDIFqGZyb250ZW5kMqdjbGllbnQxDqhzdG9yYWdlMhQ="}
+frontend {"storage2":20, "storage1":20, "storage3":20, "client2":5, "frontend":52, "client1":14}
+5456747827838441211 GenerateTokenTrace {"Token":"qGZyb250ZW5kz0u6Qz0DMdb7hqhzdG9yYWdlMhSoc3RvcmFnZTEUqHN0b3JhZ2UzFKdjbGllbnQyBahmcm9udGVuZDSnY2xpZW50MQ4="}
+storage3 {"storage1":20, "client2":5, "storage3":21, "frontend":51, "client1":14, "storage2":20}
+5456747827838441211 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz0u6Qz0DMdb7hqdjbGllbnQyBahmcm9udGVuZDOnY2xpZW50MQ6oc3RvcmFnZTIUqHN0b3JhZ2UxFKhzdG9yYWdlMxQ="}
+storage2 {"frontend":50, "client1":14, "storage1":20, "storage3":20, "client2":5, "storage2":22}
+5456747827838441211 StoragePut {"StorageID":"","Key":"key1","Value":"value2"}
+storage3 {"frontend":51, "client1":14, "storage2":20, "storage1":20, "client2":5, "storage3":22}
+5456747827838441211 StoragePut {"StorageID":"","Key":"key1","Value":"value2"}
+storage1 {"storage1":21, "frontend":52, "client1":14, "storage2":20, "storage3":20, "client2":5}
+5456747827838441211 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz0u6Qz0DMdb7hqhzdG9yYWdlMhSoc3RvcmFnZTEUqHN0b3JhZ2UzFKdjbGllbnQyBahmcm9udGVuZDSnY2xpZW50MQ4="}
+storage2 {"client2":5, "storage2":23, "frontend":50, "client1":14, "storage1":20, "storage3":20}
+5456747827838441211 StorageSaveData {"StorageID":"","Key":"key1","Value":"value2"}
+storage3 {"storage2":20, "storage1":20, "client2":5, "storage3":23, "frontend":51, "client1":14}
+5456747827838441211 StorageSaveData {"StorageID":"","Key":"key1","Value":"value2"}
+storage1 {"client1":14, "storage2":20, "storage3":20, "client2":5, "storage1":22, "frontend":52}
+5456747827838441211 StoragePut {"StorageID":"","Key":"key1","Value":"value2"}
+storage2 {"frontend":50, "client1":14, "storage1":20, "storage3":20, "client2":5, "storage2":24}
+5456747827838441211 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uyz0u6Qz0DMdb7hqdjbGllbnQxDqhzdG9yYWdlMRSoc3RvcmFnZTMUp2NsaWVudDIFqHN0b3JhZ2UyGKhmcm9udGVuZDI="}
+storage3 {"storage1":20, "client2":5, "storage3":24, "frontend":51, "client1":14, "storage2":20}
+5456747827838441211 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uzz0u6Qz0DMdb7hqhzdG9yYWdlMxioZnJvbnRlbmQzp2NsaWVudDEOqHN0b3JhZ2UyFKhzdG9yYWdlMRSnY2xpZW50MgU="}
+storage1 {"frontend":52, "client1":14, "storage2":20, "storage3":20, "client2":5, "storage1":23}
+5456747827838441211 StorageSaveData {"StorageID":"","Key":"key1","Value":"value2"}
+storage1 {"storage1":24, "frontend":52, "client1":14, "storage2":20, "storage3":20, "client2":5}
+5456747827838441211 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uxz0u6Qz0DMdb7hqdjbGllbnQyBahzdG9yYWdlMRioZnJvbnRlbmQ0p2NsaWVudDEOqHN0b3JhZ2UyFKhzdG9yYWdlMxQ="}
+frontend {"client2":5, "frontend":53, "client1":14, "storage2":24, "storage1":20, "storage3":20}
+5456747827838441211 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uyz0u6Qz0DMdb7hqdjbGllbnQxDqhzdG9yYWdlMRSoc3RvcmFnZTMUp2NsaWVudDIFqHN0b3JhZ2UyGKhmcm9udGVuZDI="}
+frontend {"frontend":54, "client1":14, "storage2":24, "storage1":20, "storage3":24, "client2":5}
+5456747827838441211 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uzz0u6Qz0DMdb7hqhzdG9yYWdlMxioZnJvbnRlbmQzp2NsaWVudDEOqHN0b3JhZ2UyFKhzdG9yYWdlMRSnY2xpZW50MgU="}
+frontend {"storage2":24, "storage1":24, "storage3":24, "client2":5, "frontend":55, "client1":14}
+5456747827838441211 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uxz0u6Qz0DMdb7hqdjbGllbnQyBahzdG9yYWdlMRioZnJvbnRlbmQ0p2NsaWVudDEOqHN0b3JhZ2UyFKhzdG9yYWdlMxQ="}
+frontend {"storage2":24, "storage1":24, "storage3":24, "client2":5, "frontend":56, "client1":14}
+5456747827838441211 FrontEndPutResult {"Err":false}
+frontend {"client2":5, "frontend":57, "client1":14, "storage2":24, "storage1":24, "storage3":24}
+5456747827838441211 GenerateTokenTrace {"Token":"qGZyb250ZW5kz0u6Qz0DMdb7hqhzdG9yYWdlMhioc3RvcmFnZTEYqHN0b3JhZ2UzGKdjbGllbnQyBahmcm9udGVuZDmnY2xpZW50MQ4="}
+frontend {"client1":17, "storage2":24, "storage1":24, "storage3":24, "client2":5, "frontend":58}
+2798797181729501876 ReceiveTokenTrace {"Token":"p2NsaWVudDHPJtdTNUdZ8rSBp2NsaWVudDER"}
+frontend {"storage1":24, "storage3":24, "client2":5, "frontend":59, "client1":17, "storage2":24}
+2798797181729501876 FrontEndGet {"Key":"key1"}
+client2 {"frontend":57, "client1":14, "storage2":24, "storage1":24, "storage3":24, "client2":6}
+5456747827838441211 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz0u6Qz0DMdb7hqhzdG9yYWdlMhioc3RvcmFnZTEYqHN0b3JhZ2UzGKdjbGllbnQyBahmcm9udGVuZDmnY2xpZW50MQ4="}
+client2 {"storage3":24, "client2":7, "frontend":57, "client1":14, "storage2":24, "storage1":24}
+5456747827838441211 KvslibPutResult {"OpId":0,"Err":false}
+frontend {"storage2":24, "storage1":24, "storage3":24, "client2":5, "frontend":60, "client1":17}
+2798797181729501876 GenerateTokenTrace {"Token":"qGZyb250ZW5kzybXUzVHWfK0hqhzdG9yYWdlMxinY2xpZW50MgWoZnJvbnRlbmQ8p2NsaWVudDERqHN0b3JhZ2UyGKhzdG9yYWdlMRg="}
+frontend {"client2":5, "frontend":61, "client1":17, "storage2":24, "storage1":24, "storage3":24}
+2798797181729501876 GenerateTokenTrace {"Token":"qGZyb250ZW5kzybXUzVHWfK0hqhzdG9yYWdlMxinY2xpZW50MgWoZnJvbnRlbmQ9p2NsaWVudDERqHN0b3JhZ2UyGKhzdG9yYWdlMRg="}
+frontend {"storage3":24, "client2":5, "frontend":62, "client1":17, "storage2":24, "storage1":24}
+2798797181729501876 GenerateTokenTrace {"Token":"qGZyb250ZW5kzybXUzVHWfK0hqhzdG9yYWdlMhioc3RvcmFnZTEYqHN0b3JhZ2UzGKdjbGllbnQyBahmcm9udGVuZD6nY2xpZW50MRE="}
+storage3 {"client2":5, "storage3":25, "frontend":60, "client1":17, "storage2":24, "storage1":24}
+2798797181729501876 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzybXUzVHWfK0hqhzdG9yYWdlMxinY2xpZW50MgWoZnJvbnRlbmQ8p2NsaWVudDERqHN0b3JhZ2UyGKhzdG9yYWdlMRg="}
+storage2 {"storage2":25, "frontend":61, "client1":17, "storage1":24, "storage3":24, "client2":5}
+2798797181729501876 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzybXUzVHWfK0hqhzdG9yYWdlMxinY2xpZW50MgWoZnJvbnRlbmQ9p2NsaWVudDERqHN0b3JhZ2UyGKhzdG9yYWdlMRg="}
+storage3 {"frontend":60, "client1":17, "storage2":24, "storage1":24, "client2":5, "storage3":26}
+2798797181729501876 StorageGet {"StorageID":"","Key":"key1"}
+storage2 {"storage2":26, "frontend":61, "client1":17, "storage1":24, "storage3":24, "client2":5}
+2798797181729501876 StorageGet {"StorageID":"","Key":"key1"}
+storage1 {"storage3":24, "client2":5, "storage1":25, "frontend":62, "client1":17, "storage2":24}
+2798797181729501876 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzybXUzVHWfK0hqhzdG9yYWdlMhioc3RvcmFnZTEYqHN0b3JhZ2UzGKdjbGllbnQyBahmcm9udGVuZD6nY2xpZW50MRE="}
+storage3 {"storage1":24, "client2":5, "storage3":27, "frontend":60, "client1":17, "storage2":24}
+2798797181729501876 StorageGetResult {"StorageID":"","Key":"key1","Value":"value2"}
+storage2 {"storage2":27, "frontend":61, "client1":17, "storage1":24, "storage3":24, "client2":5}
+2798797181729501876 StorageGetResult {"StorageID":"","Key":"key1","Value":"value2"}
+storage1 {"storage2":24, "storage3":24, "client2":5, "storage1":26, "frontend":62, "client1":17}
+2798797181729501876 StorageGet {"StorageID":"","Key":"key1"}
+storage2 {"storage2":28, "frontend":61, "client1":17, "storage1":24, "storage3":24, "client2":5}
+2798797181729501876 GenerateTokenTrace {"Token":"qHN0b3JhZ2UyzybXUzVHWfK0hqhzdG9yYWdlMxinY2xpZW50MgWoc3RvcmFnZTIcqGZyb250ZW5kPadjbGllbnQxEahzdG9yYWdlMRg="}
+storage3 {"storage1":24, "client2":5, "storage3":28, "frontend":60, "client1":17, "storage2":24}
+2798797181729501876 GenerateTokenTrace {"Token":"qHN0b3JhZ2UzzybXUzVHWfK0hqhzdG9yYWdlMxyoZnJvbnRlbmQ8p2NsaWVudDERqHN0b3JhZ2UyGKhzdG9yYWdlMRinY2xpZW50MgU="}
+storage1 {"frontend":62, "client1":17, "storage2":24, "storage3":24, "client2":5, "storage1":27}
+2798797181729501876 StorageGetResult {"StorageID":"","Key":"key1","Value":"value2"}
+storage1 {"storage2":24, "storage3":24, "client2":5, "storage1":28, "frontend":62, "client1":17}
+2798797181729501876 GenerateTokenTrace {"Token":"qHN0b3JhZ2UxzybXUzVHWfK0hqhzdG9yYWdlMRyoZnJvbnRlbmQ+p2NsaWVudDERqHN0b3JhZ2UyGKhzdG9yYWdlMxinY2xpZW50MgU="}
+frontend {"frontend":63, "client1":17, "storage2":28, "storage1":24, "storage3":24, "client2":5}
+2798797181729501876 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UyzybXUzVHWfK0hqhzdG9yYWdlMxinY2xpZW50MgWoc3RvcmFnZTIcqGZyb250ZW5kPadjbGllbnQxEahzdG9yYWdlMRg="}
+frontend {"storage2":28, "storage1":24, "storage3":28, "client2":5, "frontend":64, "client1":17}
+2798797181729501876 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UzzybXUzVHWfK0hqhzdG9yYWdlMxyoZnJvbnRlbmQ8p2NsaWVudDERqHN0b3JhZ2UyGKhzdG9yYWdlMRinY2xpZW50MgU="}
+frontend {"storage2":28, "storage1":28, "storage3":28, "client2":5, "frontend":65, "client1":17}
+2798797181729501876 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UxzybXUzVHWfK0hqhzdG9yYWdlMRyoZnJvbnRlbmQ+p2NsaWVudDERqHN0b3JhZ2UyGKhzdG9yYWdlMxinY2xpZW50MgU="}
+frontend {"client1":17, "storage2":28, "storage1":28, "storage3":28, "client2":5, "frontend":66}
+2798797181729501876 FrontEndGetResult {"Key":"key1","Value":"value2","Err":false}
+frontend {"storage2":28, "storage1":28, "storage3":28, "client2":5, "frontend":67, "client1":17}
+2798797181729501876 GenerateTokenTrace {"Token":"qGZyb250ZW5kzybXUzVHWfK0hqhmcm9udGVuZEOnY2xpZW50MRGoc3RvcmFnZTIcqHN0b3JhZ2UxHKhzdG9yYWdlMxynY2xpZW50MgU="}
+client1 {"storage3":28, "frontend":67, "storage2":28, "storage1":28, "client2":5, "client1":26}
+2798797181729501876 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzybXUzVHWfK0hqhmcm9udGVuZEOnY2xpZW50MRGoc3RvcmFnZTIcqHN0b3JhZ2UxHKhzdG9yYWdlMxynY2xpZW50MgU="}
+client1 {"frontend":67, "storage2":28, "storage1":28, "client2":5, "client1":27, "storage3":28}
+2798797181729501876 KvslibGetResult {"OpId":4,"Key":"key1","Value":"value2","Err":false}
+client2 {"storage1":24, "storage3":24, "client2":8, "frontend":57, "client1":14, "storage2":24}
+2628484913391082636 CreateTrace {}
+client2 {"storage2":24, "storage1":24, "storage3":24, "client2":9, "frontend":57, "client1":14}
+2628484913391082636 KvslibGet {"ClientId":"client2","OpId":1,"Key":"key1"}
+client2 {"frontend":57, "client1":14, "storage2":24, "storage1":24, "storage3":24, "client2":10}
+2628484913391082636 GenerateTokenTrace {"Token":"p2NsaWVudDLPJHpBGjgmHIyGqHN0b3JhZ2UzGKdjbGllbnQyCqhmcm9udGVuZDmnY2xpZW50MQ6oc3RvcmFnZTIYqHN0b3JhZ2UxGA=="}
+client1 {"storage3":28, "frontend":67, "storage2":28, "storage1":28, "client2":5, "client1":28}
+8909789087666056573 CreateTrace {}
+frontend {"client2":10, "frontend":68, "client1":17, "storage2":28, "storage1":28, "storage3":28}
+2628484913391082636 ReceiveTokenTrace {"Token":"p2NsaWVudDLPJHpBGjgmHIyGqHN0b3JhZ2UzGKdjbGllbnQyCqhmcm9udGVuZDmnY2xpZW50MQ6oc3RvcmFnZTIYqHN0b3JhZ2UxGA=="}
+client1 {"storage1":28, "client2":5, "client1":29, "storage3":28, "frontend":67, "storage2":28}
+8909789087666056573 KvslibPut {"ClientId":"client1","OpId":5,"Key":"key2","Value":"value2"}
+frontend {"client2":10, "frontend":69, "client1":17, "storage2":28, "storage1":28, "storage3":28}
+2628484913391082636 FrontEndGet {"Key":"key1"}
+client1 {"client2":5, "client1":30, "storage3":28, "frontend":67, "storage2":28, "storage1":28}
+8909789087666056573 GenerateTokenTrace {"Token":"p2NsaWVudDHPe6Xt+Bn8rX2GqGZyb250ZW5kQ6hzdG9yYWdlMhyoc3RvcmFnZTEcp2NsaWVudDIFp2NsaWVudDEeqHN0b3JhZ2UzHA=="}
+client2 {"storage2":24, "storage1":24, "storage3":24, "client2":11, "frontend":57, "client1":14}
+1760086807122259163 CreateTrace {}
+frontend {"storage3":28, "client2":10, "frontend":70, "client1":17, "storage2":28, "storage1":28}
+2628484913391082636 GenerateTokenTrace {"Token":"qGZyb250ZW5kzyR6QRo4JhyMhqhzdG9yYWdlMxynY2xpZW50MgqoZnJvbnRlbmRGp2NsaWVudDERqHN0b3JhZ2UyHKhzdG9yYWdlMRw="}
+client2 {"storage1":24, "storage3":24, "client2":12, "frontend":57, "client1":14, "storage2":24}
+1760086807122259163 KvslibGet {"ClientId":"client2","OpId":2,"Key":"key2"}
+frontend {"storage3":28, "client2":10, "frontend":71, "client1":17, "storage2":28, "storage1":28}
+2628484913391082636 GenerateTokenTrace {"Token":"qGZyb250ZW5kzyR6QRo4JhyMhqhmcm9udGVuZEenY2xpZW50MRGoc3RvcmFnZTIcqHN0b3JhZ2UxHKhzdG9yYWdlMxynY2xpZW50Mgo="}
+client2 {"storage3":24, "client2":13, "frontend":57, "client1":14, "storage2":24, "storage1":24}
+1760086807122259163 GenerateTokenTrace {"Token":"p2NsaWVudDLPGG0VoDBfrNuGqHN0b3JhZ2UyGKhzdG9yYWdlMRioc3RvcmFnZTMYp2NsaWVudDINqGZyb250ZW5kOadjbGllbnQxDg=="}
+frontend {"storage3":28, "client2":10, "frontend":72, "client1":17, "storage2":28, "storage1":28}
+2628484913391082636 GenerateTokenTrace {"Token":"qGZyb250ZW5kzyR6QRo4JhyMhqhzdG9yYWdlMxynY2xpZW50MgqoZnJvbnRlbmRIp2NsaWVudDERqHN0b3JhZ2UyHKhzdG9yYWdlMRw="}
+storage3 {"storage2":28, "storage1":28, "client2":10, "storage3":29, "frontend":70, "client1":17}
+2628484913391082636 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzyR6QRo4JhyMhqhzdG9yYWdlMxynY2xpZW50MgqoZnJvbnRlbmRGp2NsaWVudDERqHN0b3JhZ2UyHKhzdG9yYWdlMRw="}
+client2 {"client1":14, "storage2":24, "storage1":24, "storage3":24, "client2":14, "frontend":57}
+608969951075272878 CreateTrace {}
+client2 {"storage3":24, "client2":15, "frontend":57, "client1":14, "storage2":24, "storage1":24}
+608969951075272878 KvslibGet {"ClientId":"client2","OpId":3,"Key":"key3"}
+storage3 {"storage1":28, "client2":10, "storage3":30, "frontend":70, "client1":17, "storage2":28}
+2628484913391082636 StorageGet {"StorageID":"","Key":"key1"}
+storage2 {"storage1":28, "storage3":28, "client2":10, "storage2":29, "frontend":71, "client1":17}
+2628484913391082636 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzyR6QRo4JhyMhqhmcm9udGVuZEenY2xpZW50MRGoc3RvcmFnZTIcqHN0b3JhZ2UxHKhzdG9yYWdlMxynY2xpZW50Mgo="}
+storage1 {"storage2":28, "storage3":28, "client2":10, "storage1":29, "frontend":72, "client1":17}
+2628484913391082636 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzyR6QRo4JhyMhqhzdG9yYWdlMxynY2xpZW50MgqoZnJvbnRlbmRIp2NsaWVudDERqHN0b3JhZ2UyHKhzdG9yYWdlMRw="}
+client2 {"storage1":24, "storage3":24, "client2":16, "frontend":57, "client1":14, "storage2":24}
+608969951075272878 GenerateTokenTrace {"Token":"p2NsaWVudDLPCHN+8ay6iK6GqHN0b3JhZ2UzGKdjbGllbnQyEKhmcm9udGVuZDmnY2xpZW50MQ6oc3RvcmFnZTIYqHN0b3JhZ2UxGA=="}
+storage3 {"storage2":28, "storage1":28, "client2":10, "storage3":31, "frontend":70, "client1":17}
+2628484913391082636 StorageGetResult {"StorageID":"","Key":"key1","Value":"value2"}
+storage2 {"storage1":28, "storage3":28, "client2":10, "storage2":30, "frontend":71, "client1":17}
+2628484913391082636 StorageGet {"StorageID":"","Key":"key1"}
+storage1 {"client1":17, "storage2":28, "storage3":28, "client2":10, "storage1":30, "frontend":72}
+2628484913391082636 StorageGet {"StorageID":"","Key":"key1"}
+storage3 {"frontend":70, "client1":17, "storage2":28, "storage1":28, "client2":10, "storage3":32}
+2628484913391082636 GenerateTokenTrace {"Token":"qHN0b3JhZ2UzzyR6QRo4JhyMhqhzdG9yYWdlMyCoZnJvbnRlbmRGp2NsaWVudDERqHN0b3JhZ2UyHKhzdG9yYWdlMRynY2xpZW50Mgo="}
+storage2 {"client2":10, "storage2":31, "frontend":71, "client1":17, "storage1":28, "storage3":28}
+2628484913391082636 StorageGetResult {"StorageID":"","Key":"key1","Value":"value2"}
+storage1 {"client2":10, "storage1":31, "frontend":72, "client1":17, "storage2":28, "storage3":28}
+2628484913391082636 StorageGetResult {"StorageID":"","Key":"key1","Value":"value2"}
+storage2 {"frontend":71, "client1":17, "storage1":28, "storage3":28, "client2":10, "storage2":32}
+2628484913391082636 GenerateTokenTrace {"Token":"qHN0b3JhZ2UyzyR6QRo4JhyMhqhzdG9yYWdlMiCoZnJvbnRlbmRHp2NsaWVudDERqHN0b3JhZ2UxHKhzdG9yYWdlMxynY2xpZW50Mgo="}
+storage1 {"storage3":28, "client2":10, "storage1":32, "frontend":72, "client1":17, "storage2":28}
+2628484913391082636 GenerateTokenTrace {"Token":"qHN0b3JhZ2UxzyR6QRo4JhyMhqhzdG9yYWdlMxynY2xpZW50Mgqoc3RvcmFnZTEgqGZyb250ZW5kSKdjbGllbnQxEahzdG9yYWdlMhw="}
+frontend {"storage2":28, "storage1":28, "storage3":32, "client2":10, "frontend":73, "client1":17}
+2628484913391082636 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UzzyR6QRo4JhyMhqhzdG9yYWdlMyCoZnJvbnRlbmRGp2NsaWVudDERqHN0b3JhZ2UyHKhzdG9yYWdlMRynY2xpZW50Mgo="}
+frontend {"storage3":32, "client2":10, "frontend":74, "client1":17, "storage2":32, "storage1":28}
+2628484913391082636 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UyzyR6QRo4JhyMhqhzdG9yYWdlMiCoZnJvbnRlbmRHp2NsaWVudDERqHN0b3JhZ2UxHKhzdG9yYWdlMxynY2xpZW50Mgo="}
+frontend {"frontend":75, "client1":17, "storage2":32, "storage1":32, "storage3":32, "client2":10}
+2628484913391082636 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UxzyR6QRo4JhyMhqhzdG9yYWdlMxynY2xpZW50Mgqoc3RvcmFnZTEgqGZyb250ZW5kSKdjbGllbnQxEahzdG9yYWdlMhw="}
+frontend {"frontend":76, "client1":17, "storage2":32, "storage1":32, "storage3":32, "client2":10}
+2628484913391082636 FrontEndGetResult {"Key":"key1","Value":"value2","Err":false}
+frontend {"frontend":77, "client1":17, "storage2":32, "storage1":32, "storage3":32, "client2":10}
+2628484913391082636 GenerateTokenTrace {"Token":"qGZyb250ZW5kzyR6QRo4JhyMhqhzdG9yYWdlMSCoc3RvcmFnZTMgp2NsaWVudDIKqGZyb250ZW5kTadjbGllbnQxEahzdG9yYWdlMiA="}
+frontend {"storage1":32, "storage3":32, "client2":10, "frontend":78, "client1":30, "storage2":32}
+8909789087666056573 ReceiveTokenTrace {"Token":"p2NsaWVudDHPe6Xt+Bn8rX2GqGZyb250ZW5kQ6hzdG9yYWdlMhyoc3RvcmFnZTEcp2NsaWVudDIFp2NsaWVudDEeqHN0b3JhZ2UzHA=="}
+client2 {"client2":17, "frontend":77, "client1":17, "storage2":32, "storage1":32, "storage3":32}
+2628484913391082636 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzyR6QRo4JhyMhqhzdG9yYWdlMSCoc3RvcmFnZTMgp2NsaWVudDIKqGZyb250ZW5kTadjbGllbnQxEahzdG9yYWdlMiA="}
+frontend {"client1":30, "storage2":32, "storage1":32, "storage3":32, "client2":10, "frontend":79}
+8909789087666056573 FrontEndPut {"Key":"key2","Value":"value2"}
+client2 {"storage1":32, "storage3":32, "client2":18, "frontend":77, "client1":17, "storage2":32}
+2628484913391082636 KvslibGetResult {"OpId":1,"Key":"key1","Value":"value2","Err":false}
+frontend {"frontend":80, "client1":30, "storage2":32, "storage1":32, "storage3":32, "client2":10}
+8909789087666056573 GenerateTokenTrace {"Token":"qGZyb250ZW5kz3ul7fgZ/K19hqdjbGllbnQyCqhmcm9udGVuZFCnY2xpZW50MR6oc3RvcmFnZTIgqHN0b3JhZ2UxIKhzdG9yYWdlMyA="}
+frontend {"storage3":32, "client2":10, "frontend":81, "client1":30, "storage2":32, "storage1":32}
+8909789087666056573 GenerateTokenTrace {"Token":"qGZyb250ZW5kz3ul7fgZ/K19hqhzdG9yYWdlMyCnY2xpZW50MgqoZnJvbnRlbmRRp2NsaWVudDEeqHN0b3JhZ2UyIKhzdG9yYWdlMSA="}
+frontend {"storage2":32, "storage1":32, "storage3":32, "client2":10, "frontend":82, "client1":30}
+8909789087666056573 GenerateTokenTrace {"Token":"qGZyb250ZW5kz3ul7fgZ/K19hqdjbGllbnQyCqhmcm9udGVuZFKnY2xpZW50MR6oc3RvcmFnZTIgqHN0b3JhZ2UxIKhzdG9yYWdlMyA="}
+storage3 {"storage3":33, "frontend":80, "client1":30, "storage2":32, "storage1":32, "client2":10}
+8909789087666056573 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz3ul7fgZ/K19hqdjbGllbnQyCqhmcm9udGVuZFCnY2xpZW50MR6oc3RvcmFnZTIgqHN0b3JhZ2UxIKhzdG9yYWdlMyA="}
+storage2 {"storage3":32, "client2":10, "storage2":33, "frontend":81, "client1":30, "storage1":32}
+8909789087666056573 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz3ul7fgZ/K19hqhzdG9yYWdlMyCnY2xpZW50MgqoZnJvbnRlbmRRp2NsaWVudDEeqHN0b3JhZ2UyIKhzdG9yYWdlMSA="}
+storage3 {"storage3":34, "frontend":80, "client1":30, "storage2":32, "storage1":32, "client2":10}
+8909789087666056573 StoragePut {"StorageID":"","Key":"key2","Value":"value2"}
+storage2 {"client1":30, "storage1":32, "storage3":32, "client2":10, "storage2":34, "frontend":81}
+8909789087666056573 StoragePut {"StorageID":"","Key":"key2","Value":"value2"}
+storage1 {"frontend":82, "client1":30, "storage2":32, "storage3":32, "client2":10, "storage1":33}
+8909789087666056573 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz3ul7fgZ/K19hqdjbGllbnQyCqhmcm9udGVuZFKnY2xpZW50MR6oc3RvcmFnZTIgqHN0b3JhZ2UxIKhzdG9yYWdlMyA="}
+storage3 {"storage1":32, "client2":10, "storage3":35, "frontend":80, "client1":30, "storage2":32}
+8909789087666056573 StorageSaveData {"StorageID":"","Key":"key2","Value":"value2"}
+storage1 {"storage2":32, "storage3":32, "client2":10, "storage1":34, "frontend":82, "client1":30}
+8909789087666056573 StoragePut {"StorageID":"","Key":"key2","Value":"value2"}
+storage2 {"storage1":32, "storage3":32, "client2":10, "storage2":35, "frontend":81, "client1":30}
+8909789087666056573 StorageSaveData {"StorageID":"","Key":"key2","Value":"value2"}
+storage3 {"client1":30, "storage2":32, "storage1":32, "client2":10, "storage3":36, "frontend":80}
+8909789087666056573 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uzz3ul7fgZ/K19hqdjbGllbnQyCqhzdG9yYWdlMySoZnJvbnRlbmRQp2NsaWVudDEeqHN0b3JhZ2UyIKhzdG9yYWdlMSA="}
+storage2 {"storage2":36, "frontend":81, "client1":30, "storage1":32, "storage3":32, "client2":10}
+8909789087666056573 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uyz3ul7fgZ/K19hqhzdG9yYWdlMSCoc3RvcmFnZTMgp2NsaWVudDIKqHN0b3JhZ2UyJKhmcm9udGVuZFGnY2xpZW50MR4="}
+storage1 {"storage3":32, "client2":10, "storage1":35, "frontend":82, "client1":30, "storage2":32}
+8909789087666056573 StorageSaveData {"StorageID":"","Key":"key2","Value":"value2"}
+storage1 {"storage3":32, "client2":10, "storage1":36, "frontend":82, "client1":30, "storage2":32}
+8909789087666056573 GenerateTokenTrace {"Token":"qHN0b3JhZ2Uxz3ul7fgZ/K19hqdjbGllbnQxHqhzdG9yYWdlMiCoc3RvcmFnZTMgp2NsaWVudDIKqHN0b3JhZ2UxJKhmcm9udGVuZFI="}
+frontend {"frontend":83, "client1":30, "storage2":36, "storage1":32, "storage3":32, "client2":10}
+8909789087666056573 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uyz3ul7fgZ/K19hqhzdG9yYWdlMSCoc3RvcmFnZTMgp2NsaWVudDIKqHN0b3JhZ2UyJKhmcm9udGVuZFGnY2xpZW50MR4="}
+frontend {"storage1":32, "storage3":36, "client2":10, "frontend":84, "client1":30, "storage2":36}
+8909789087666056573 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uzz3ul7fgZ/K19hqdjbGllbnQyCqhzdG9yYWdlMySoZnJvbnRlbmRQp2NsaWVudDEeqHN0b3JhZ2UyIKhzdG9yYWdlMSA="}
+frontend {"frontend":85, "client1":30, "storage2":36, "storage1":36, "storage3":36, "client2":10}
+8909789087666056573 ReceiveTokenTrace {"Token":"qHN0b3JhZ2Uxz3ul7fgZ/K19hqdjbGllbnQxHqhzdG9yYWdlMiCoc3RvcmFnZTMgp2NsaWVudDIKqHN0b3JhZ2UxJKhmcm9udGVuZFI="}
+frontend {"client2":10, "frontend":86, "client1":30, "storage2":36, "storage1":36, "storage3":36}
+8909789087666056573 FrontEndPutResult {"Err":false}
+frontend {"storage2":36, "storage1":36, "storage3":36, "client2":10, "frontend":87, "client1":30}
+8909789087666056573 GenerateTokenTrace {"Token":"qGZyb250ZW5kz3ul7fgZ/K19hqdjbGllbnQyCqhmcm9udGVuZFenY2xpZW50MR6oc3RvcmFnZTIkqHN0b3JhZ2UxJKhzdG9yYWdlMyQ="}
+frontend {"frontend":88, "client1":30, "storage2":36, "storage1":36, "storage3":36, "client2":13}
+1760086807122259163 ReceiveTokenTrace {"Token":"p2NsaWVudDLPGG0VoDBfrNuGqHN0b3JhZ2UyGKhzdG9yYWdlMRioc3RvcmFnZTMYp2NsaWVudDINqGZyb250ZW5kOadjbGllbnQxDg=="}
+frontend {"frontend":89, "client1":30, "storage2":36, "storage1":36, "storage3":36, "client2":13}
+1760086807122259163 FrontEndGet {"Key":"key2"}
+client1 {"storage1":36, "client2":10, "client1":31, "storage3":36, "frontend":87, "storage2":36}
+8909789087666056573 ReceiveTokenTrace {"Token":"qGZyb250ZW5kz3ul7fgZ/K19hqdjbGllbnQyCqhmcm9udGVuZFenY2xpZW50MR6oc3RvcmFnZTIkqHN0b3JhZ2UxJKhzdG9yYWdlMyQ="}
+client1 {"client1":32, "storage3":36, "frontend":87, "storage2":36, "storage1":36, "client2":10}
+8909789087666056573 KvslibPutResult {"OpId":5,"Err":false}
+frontend {"storage3":36, "client2":13, "frontend":90, "client1":30, "storage2":36, "storage1":36}
+1760086807122259163 GenerateTokenTrace {"Token":"qGZyb250ZW5kzxhtFaAwX6zbhqhzdG9yYWdlMySnY2xpZW50Mg2oZnJvbnRlbmRap2NsaWVudDEeqHN0b3JhZ2UyJKhzdG9yYWdlMSQ="}
+frontend {"client2":13, "frontend":91, "client1":30, "storage2":36, "storage1":36, "storage3":36}
+1760086807122259163 GenerateTokenTrace {"Token":"qGZyb250ZW5kzxhtFaAwX6zbhqhmcm9udGVuZFunY2xpZW50MR6oc3RvcmFnZTIkqHN0b3JhZ2UxJKhzdG9yYWdlMySnY2xpZW50Mg0="}
+storage3 {"storage1":36, "client2":13, "storage3":37, "frontend":90, "client1":30, "storage2":36}
+1760086807122259163 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzxhtFaAwX6zbhqhzdG9yYWdlMySnY2xpZW50Mg2oZnJvbnRlbmRap2NsaWVudDEeqHN0b3JhZ2UyJKhzdG9yYWdlMSQ="}
+frontend {"frontend":92, "client1":30, "storage2":36, "storage1":36, "storage3":36, "client2":13}
+1760086807122259163 GenerateTokenTrace {"Token":"qGZyb250ZW5kzxhtFaAwX6zbhqhzdG9yYWdlMiSoc3RvcmFnZTEkqHN0b3JhZ2UzJKdjbGllbnQyDahmcm9udGVuZFynY2xpZW50MR4="}
+storage3 {"client1":30, "storage2":36, "storage1":36, "client2":13, "storage3":38, "frontend":90}
+1760086807122259163 StorageGet {"StorageID":"","Key":"key2"}
+storage1 {"frontend":91, "client1":30, "storage2":36, "storage3":36, "client2":13, "storage1":37}
+1760086807122259163 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzxhtFaAwX6zbhqhmcm9udGVuZFunY2xpZW50MR6oc3RvcmFnZTIkqHN0b3JhZ2UxJKhzdG9yYWdlMySnY2xpZW50Mg0="}
+storage3 {"frontend":90, "client1":30, "storage2":36, "storage1":36, "client2":13, "storage3":39}
+1760086807122259163 StorageGetResult {"StorageID":"","Key":"key2","Value":"value2"}
+storage1 {"storage2":36, "storage3":36, "client2":13, "storage1":38, "frontend":91, "client1":30}
+1760086807122259163 StorageGet {"StorageID":"","Key":"key2"}
+storage2 {"storage1":36, "storage3":36, "client2":13, "storage2":37, "frontend":92, "client1":30}
+1760086807122259163 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzxhtFaAwX6zbhqhzdG9yYWdlMiSoc3RvcmFnZTEkqHN0b3JhZ2UzJKdjbGllbnQyDahmcm9udGVuZFynY2xpZW50MR4="}
+storage3 {"client2":13, "storage3":40, "frontend":90, "client1":30, "storage2":36, "storage1":36}
+1760086807122259163 GenerateTokenTrace {"Token":"qHN0b3JhZ2UzzxhtFaAwX6zbhqdjbGllbnQxHqhzdG9yYWdlMiSoc3RvcmFnZTEkp2NsaWVudDINqHN0b3JhZ2UzKKhmcm9udGVuZFo="}
+storage1 {"storage1":39, "frontend":91, "client1":30, "storage2":36, "storage3":36, "client2":13}
+1760086807122259163 StorageGetResult {"StorageID":"","Key":"key2","Value":"value2"}
+storage2 {"storage1":36, "storage3":36, "client2":13, "storage2":38, "frontend":92, "client1":30}
+1760086807122259163 StorageGet {"StorageID":"","Key":"key2"}
+storage2 {"frontend":92, "client1":30, "storage1":36, "storage3":36, "client2":13, "storage2":39}
+1760086807122259163 StorageGetResult {"StorageID":"","Key":"key2","Value":"value2"}
+storage1 {"storage3":36, "client2":13, "storage1":40, "frontend":91, "client1":30, "storage2":36}
+1760086807122259163 GenerateTokenTrace {"Token":"qHN0b3JhZ2UxzxhtFaAwX6zbhqhzdG9yYWdlMiSoc3RvcmFnZTMkp2NsaWVudDINqHN0b3JhZ2UxKKhmcm9udGVuZFunY2xpZW50MR4="}
+frontend {"storage1":36, "storage3":40, "client2":13, "frontend":93, "client1":30, "storage2":36}
+1760086807122259163 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UzzxhtFaAwX6zbhqdjbGllbnQxHqhzdG9yYWdlMiSoc3RvcmFnZTEkp2NsaWVudDINqHN0b3JhZ2UzKKhmcm9udGVuZFo="}
+storage2 {"frontend":92, "client1":30, "storage1":36, "storage3":36, "client2":13, "storage2":40}
+1760086807122259163 GenerateTokenTrace {"Token":"qHN0b3JhZ2UyzxhtFaAwX6zbhqhzdG9yYWdlMiioZnJvbnRlbmRcp2NsaWVudDEeqHN0b3JhZ2UxJKhzdG9yYWdlMySnY2xpZW50Mg0="}
+frontend {"storage1":40, "storage3":40, "client2":13, "frontend":94, "client1":30, "storage2":36}
+1760086807122259163 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UxzxhtFaAwX6zbhqhzdG9yYWdlMiSoc3RvcmFnZTMkp2NsaWVudDINqHN0b3JhZ2UxKKhmcm9udGVuZFunY2xpZW50MR4="}
+frontend {"frontend":95, "client1":30, "storage2":40, "storage1":40, "storage3":40, "client2":13}
+1760086807122259163 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UyzxhtFaAwX6zbhqhzdG9yYWdlMiioZnJvbnRlbmRcp2NsaWVudDEeqHN0b3JhZ2UxJKhzdG9yYWdlMySnY2xpZW50Mg0="}
+frontend {"frontend":96, "client1":30, "storage2":40, "storage1":40, "storage3":40, "client2":13}
+1760086807122259163 FrontEndGetResult {"Key":"key2","Value":"value2","Err":false}
+frontend {"storage3":40, "client2":13, "frontend":97, "client1":30, "storage2":40, "storage1":40}
+1760086807122259163 GenerateTokenTrace {"Token":"qGZyb250ZW5kzxhtFaAwX6zbhqhzdG9yYWdlMSioc3RvcmFnZTMop2NsaWVudDINqGZyb250ZW5kYadjbGllbnQxHqhzdG9yYWdlMig="}
+frontend {"storage3":40, "client2":16, "frontend":98, "client1":30, "storage2":40, "storage1":40}
+608969951075272878 ReceiveTokenTrace {"Token":"p2NsaWVudDLPCHN+8ay6iK6GqHN0b3JhZ2UzGKdjbGllbnQyEKhmcm9udGVuZDmnY2xpZW50MQ6oc3RvcmFnZTIYqHN0b3JhZ2UxGA=="}
+client2 {"client2":19, "frontend":97, "client1":30, "storage2":40, "storage1":40, "storage3":40}
+1760086807122259163 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzxhtFaAwX6zbhqhzdG9yYWdlMSioc3RvcmFnZTMop2NsaWVudDINqGZyb250ZW5kYadjbGllbnQxHqhzdG9yYWdlMig="}
+frontend {"client2":16, "frontend":99, "client1":30, "storage2":40, "storage1":40, "storage3":40}
+608969951075272878 FrontEndGet {"Key":"key3"}
+client2 {"client2":20, "frontend":97, "client1":30, "storage2":40, "storage1":40, "storage3":40}
+1760086807122259163 KvslibGetResult {"OpId":2,"Key":"key2","Value":"value2","Err":false}
+frontend {"frontend":100, "client1":30, "storage2":40, "storage1":40, "storage3":40, "client2":16}
+608969951075272878 GenerateTokenTrace {"Token":"qGZyb250ZW5kzwhzfvGsuoiuhqhmcm9udGVuZGSnY2xpZW50MR6oc3RvcmFnZTIoqHN0b3JhZ2UxKKhzdG9yYWdlMyinY2xpZW50MhA="}
+frontend {"frontend":101, "client1":30, "storage2":40, "storage1":40, "storage3":40, "client2":16}
+608969951075272878 GenerateTokenTrace {"Token":"qGZyb250ZW5kzwhzfvGsuoiuhqhzdG9yYWdlMSioc3RvcmFnZTMop2NsaWVudDIQqGZyb250ZW5kZadjbGllbnQxHqhzdG9yYWdlMig="}
+storage3 {"client2":16, "storage3":41, "frontend":100, "client1":30, "storage2":40, "storage1":40}
+608969951075272878 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzwhzfvGsuoiuhqhmcm9udGVuZGSnY2xpZW50MR6oc3RvcmFnZTIoqHN0b3JhZ2UxKKhzdG9yYWdlMyinY2xpZW50MhA="}
+frontend {"client2":16, "frontend":102, "client1":30, "storage2":40, "storage1":40, "storage3":40}
+608969951075272878 GenerateTokenTrace {"Token":"qGZyb250ZW5kzwhzfvGsuoiuhqdjbGllbnQxHqhzdG9yYWdlMiioc3RvcmFnZTEoqHN0b3JhZ2UzKKdjbGllbnQyEKhmcm9udGVuZGY="}
+storage3 {"storage2":40, "storage1":40, "client2":16, "storage3":42, "frontend":100, "client1":30}
+608969951075272878 StorageGet {"StorageID":"","Key":"key3"}
+storage1 {"frontend":101, "client1":30, "storage2":40, "storage3":40, "client2":16, "storage1":41}
+608969951075272878 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzwhzfvGsuoiuhqhzdG9yYWdlMSioc3RvcmFnZTMop2NsaWVudDIQqGZyb250ZW5kZadjbGllbnQxHqhzdG9yYWdlMig="}
+storage3 {"client1":30, "storage2":40, "storage1":40, "client2":16, "storage3":43, "frontend":100}
+608969951075272878 StorageGetResult {"StorageID":"","Key":"key3","Value":"value3"}
+storage1 {"storage3":40, "client2":16, "storage1":42, "frontend":101, "client1":30, "storage2":40}
+608969951075272878 StorageGet {"StorageID":"","Key":"key3"}
+storage2 {"client2":16, "storage2":41, "frontend":102, "client1":30, "storage1":40, "storage3":40}
+608969951075272878 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzwhzfvGsuoiuhqdjbGllbnQxHqhzdG9yYWdlMiioc3RvcmFnZTEoqHN0b3JhZ2UzKKdjbGllbnQyEKhmcm9udGVuZGY="}
+storage3 {"client1":30, "storage2":40, "storage1":40, "client2":16, "storage3":44, "frontend":100}
+608969951075272878 GenerateTokenTrace {"Token":"qHN0b3JhZ2UzzwhzfvGsuoiuhqdjbGllbnQxHqhzdG9yYWdlMiioc3RvcmFnZTEop2NsaWVudDIQqHN0b3JhZ2UzLKhmcm9udGVuZGQ="}
+storage1 {"storage3":40, "client2":16, "storage1":43, "frontend":101, "client1":30, "storage2":40}
+608969951075272878 StorageGetResult {"StorageID":"","Key":"key3","Value":"value3"}
+storage2 {"frontend":102, "client1":30, "storage1":40, "storage3":40, "client2":16, "storage2":42}
+608969951075272878 StorageGet {"StorageID":"","Key":"key3"}
+storage1 {"storage3":40, "client2":16, "storage1":44, "frontend":101, "client1":30, "storage2":40}
+608969951075272878 GenerateTokenTrace {"Token":"qHN0b3JhZ2UxzwhzfvGsuoiuhqdjbGllbnQyEKhzdG9yYWdlMSyoZnJvbnRlbmRlp2NsaWVudDEeqHN0b3JhZ2UyKKhzdG9yYWdlMyg="}
+storage2 {"storage1":40, "storage3":40, "client2":16, "storage2":43, "frontend":102, "client1":30}
+608969951075272878 StorageGetResult {"StorageID":"","Key":"key3","Value":"value3"}
+frontend {"client1":30, "storage2":40, "storage1":40, "storage3":44, "client2":16, "frontend":103}
+608969951075272878 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UzzwhzfvGsuoiuhqdjbGllbnQxHqhzdG9yYWdlMiioc3RvcmFnZTEop2NsaWVudDIQqHN0b3JhZ2UzLKhmcm9udGVuZGQ="}
+storage2 {"frontend":102, "client1":30, "storage1":40, "storage3":40, "client2":16, "storage2":44}
+608969951075272878 GenerateTokenTrace {"Token":"qHN0b3JhZ2UyzwhzfvGsuoiuhqhmcm9udGVuZGanY2xpZW50MR6oc3RvcmFnZTEoqHN0b3JhZ2UzKKdjbGllbnQyEKhzdG9yYWdlMiw="}
+frontend {"storage1":44, "storage3":44, "client2":16, "frontend":104, "client1":30, "storage2":40}
+608969951075272878 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UxzwhzfvGsuoiuhqdjbGllbnQyEKhzdG9yYWdlMSyoZnJvbnRlbmRlp2NsaWVudDEeqHN0b3JhZ2UyKKhzdG9yYWdlMyg="}
+frontend {"storage1":44, "storage3":44, "client2":16, "frontend":105, "client1":30, "storage2":44}
+608969951075272878 ReceiveTokenTrace {"Token":"qHN0b3JhZ2UyzwhzfvGsuoiuhqhmcm9udGVuZGanY2xpZW50MR6oc3RvcmFnZTEoqHN0b3JhZ2UzKKdjbGllbnQyEKhzdG9yYWdlMiw="}
+frontend {"client2":16, "frontend":106, "client1":30, "storage2":44, "storage1":44, "storage3":44}
+608969951075272878 FrontEndGetResult {"Key":"key3","Value":"value3","Err":false}
+frontend {"storage3":44, "client2":16, "frontend":107, "client1":30, "storage2":44, "storage1":44}
+608969951075272878 GenerateTokenTrace {"Token":"qGZyb250ZW5kzwhzfvGsuoiuhqhzdG9yYWdlMyynY2xpZW50MhCoZnJvbnRlbmRrp2NsaWVudDEeqHN0b3JhZ2UyLKhzdG9yYWdlMSw="}
+client2 {"frontend":107, "client1":30, "storage2":44, "storage1":44, "storage3":44, "client2":21}
+608969951075272878 ReceiveTokenTrace {"Token":"qGZyb250ZW5kzwhzfvGsuoiuhqhzdG9yYWdlMyynY2xpZW50MhCoZnJvbnRlbmRrp2NsaWVudDEeqHN0b3JhZ2UyLKhzdG9yYWdlMSw="}
+client2 {"storage3":44, "client2":22, "frontend":107, "client1":30, "storage2":44, "storage1":44}
+608969951075272878 KvslibGetResult {"OpId":3,"Key":"key3","Value":"value3","Err":false}
+client2 {"client1":30, "storage2":44, "storage1":44, "storage3":44, "client2":23, "frontend":107}
+3657937185799933058 KvslibComplete {"ClientId":"client2"}
+client1 {"frontend":87, "storage2":36, "storage1":36, "client2":10, "client1":33, "storage3":36}
+7893085645585543563 KvslibComplete {"ClientId":"client1"}
